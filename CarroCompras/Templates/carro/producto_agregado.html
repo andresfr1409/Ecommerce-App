@@ -1,0 +1,16 @@
+{% extends 'Ecommerce/base.html' %}
+
+{% load static %}
+
+{% block title %} Tienda {% endblock %}
+
+
+{% block content %}
+    <h1>Pagina de tienda</h1>
+    <section class="page-section clearfix">
+        <p>El producto "{{ producto.nombre }}" se ha añadido correctamente al carrito.</p>
+        <a href="{% url 'Tienda' %}">Volver a la tienda</a>
+        |
+        <a href="{% url 'carrito' %}">Ver Carrito</a>
+    </section>
+{% endblock %}

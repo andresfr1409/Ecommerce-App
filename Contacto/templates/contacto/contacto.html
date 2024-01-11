@@ -1,0 +1,23 @@
+{% extends 'Ecommerce/base.html' %}
+
+{% load static %}
+
+{% block title %} Contacto {% endblock %}
+
+
+{% block content %}
+    <h1>Pagina de contacto</h1>
+    <div class="contenedorFormulario">
+        <form method="post" action="{% url 'Contacto' %}">
+            {% csrf_token %}
+            <table style="color: #ffffff;margin: 30px auto">{{ formulario_contacto.as_table }}</table>
+            <input type="submit" value="Enviar" class="btn btn-success"></input>
+            <input type="reset" value="Borrar" class="btn btn-danger"></input>
+        </form>
+        {% if messages %}
+            {% for message in messages %}
+                <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}

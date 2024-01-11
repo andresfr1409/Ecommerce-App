@@ -1,0 +1,46 @@
+{% extends 'Ecommerce/base.html' %}
+
+{% load static %}
+
+{% block title %} Tienda {% endblock %}
+
+
+{% block content %}
+    <h1>Pagina de tienda</h1>
+    <section class="page-section clearfix">
+        {% if carro %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio unitario</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for key, value in request.session.carro.items %}
+                        <tr>
+                            <td><img src="{{ value.imagen }}" alt="{{ value.nombre }}" width="15%" height="100" role="img" aria-label="Imagen del producto"> {{ value.nombre }}</td>
+                            <td>${{ value.precio }}</td>
+                            <td>{{ value.cantidad }}</td>
+                            <td>${{ value.precio|floatformat:2 }} </td>
+                            <td>
+                                <a class="btn btn-success" href="{% url 'sumar_producto' key %}">+</a>
+                                |
+                                <a class="btn btn-success" href="{% url 'restar_producto' key %}">-</a>
+                                |
+                                <a class="btn btn-danger" href="{% url 'eliminar_producto' key %}">Eliminar</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <p>Total: ${{ total_carrito }}</p>
+            <a href="{% url 'vaciar_carrito' %}" class="btn btn-danger">Vaciar Carrito</a>
+        {% else %}
+            <p>El carrito está vacío.</p>
+        {% endif %}
+    </section>
+{% endblock %}

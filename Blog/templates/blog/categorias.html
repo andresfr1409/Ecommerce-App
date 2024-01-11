@@ -1,0 +1,40 @@
+{% extends 'Ecommerce/base.html' %}
+
+{% load static %}
+
+{% block title %} Blog {% endblock %}
+
+
+{% block content %}
+    <h1>Categorias</h1>
+    {% for post in posts %}
+        <section class="page-section clearfix">
+            <div class="container">
+                <div class="intro">
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ post.imagen.url }}" alt="" style="width: 50%;">
+                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                        <h2 class="section-heading mb-4" >
+                        <span class="section-heading-lower" style="font-size: 35px">{{ post.titulo }}</span>
+                        <span class="section-heading-upper">{{ post.descripcion }}</span>
+                        </h2>
+                        <div style="text-align: left;">
+                            {% for categoria in post.categorias.all %}
+                                {{ categoria.nombre }}{% if not forloop.last %}, {% endif %}
+                            {% endfor %} / {{ post.autor.username }} 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+    <section class="page-section clearfix">
+        <p class="fw-bold" style="text-align:center;font-size:20">Categoria</p>
+        <div class="btn-group d-flex justify-content-center" role="group" aria-label="Categorías">
+            {% for categoria in categorias %}
+                <a href="{% url 'categoria' categoria.id %}" class="btn btn-success">{{ categoria.nombre }}</a>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
+
+
