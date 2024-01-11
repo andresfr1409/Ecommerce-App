@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'Ecommerce',
     'Servicios',
     'Blog',
@@ -141,3 +142,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'feliperin14@gmail.com'
 EMAIL_HOST_PASSWORD = 'upsk rhvf hyai mkmu'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
