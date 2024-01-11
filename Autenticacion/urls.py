@@ -2,5 +2,5 @@ from django.urls import path
 from Autenticacion import views 
 
 urlpatterns = [
-    path('registro/', views.registro, name='registro'),
+    path('registro/', views.Vregistro.as_view(), name='registro'),
 ]
