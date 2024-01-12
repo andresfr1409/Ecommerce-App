@@ -306,3 +306,13 @@ ul.errorlist{
   color: #ffffff ;
   border-top: 3px solid #ffffff;
 }
+
+#formularioRegistro{
+  background-color: rgb(104, 160, 92);
+  font-family: Arial;
+  font-size: 18px;
+  color: #000000 ;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 20px;
+}

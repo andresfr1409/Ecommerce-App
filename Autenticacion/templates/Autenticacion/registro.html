@@ -2,16 +2,24 @@
 
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block title %} Registro {% endblock %}
 
 
 {% block content %}
     <h1>Pagina de registro</h1>
     <section>
-        <form method="post" action="" style="color:white">
-            {% csrf_token %}
-            {{ form_registro.as_p }}
-            <button type="submit">Registrarse</button>
-        </form>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form method="post" action="" id="formularioRegistro">
+                        {% csrf_token %}
+                        {{ form_registro|crispy }}
+                        <button type="submit" class="btn btn-success" style="margin-left: 180px;font-size: 20px;Color:black">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 {% endblock %}
