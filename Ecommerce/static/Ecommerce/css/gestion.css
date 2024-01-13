@@ -316,3 +316,18 @@ ul.errorlist{
   border-radius: 20px;
   padding: 20px;
 }
+
+#mensajesCentrales{
+  color: #ffffff;
+  margin-bottom: 35px;
+  font-size: 40px;
+  font-family: Arial;
+  background-color: rgb(0, 61, 0);
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#botonesLogueo{
+  margin-right: 30px;
+}

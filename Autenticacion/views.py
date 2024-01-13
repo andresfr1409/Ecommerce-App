@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 from django.contrib import messages
 
 class Vregistro(View):
@@ -26,3 +26,9 @@ class Vregistro(View):
             for mensaje in form_registro.error_messages:
                 messages.error(request, form_registro.error_messages[mensaje])
             return render(request,"Autenticacion/registro.html", {'form_registro': form_registro})
+
+def cerrar_sesion(request):
+    
+    logout(request)
+    
+    return redirect('Home')
