@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
 from django.contrib import messages
 
@@ -10,7 +10,7 @@ class Vregistro(View):
         
         form_registro = UserCreationForm()
         
-        return render(request,"Autenticacion/registro.html", {'form_registro': form_registro})
+        return render(request,"Autenticacion/registro_usuario/registro.html", {'form_registro': form_registro})
 
     def post(self, request):
         
@@ -25,7 +25,13 @@ class Vregistro(View):
         else:
             for mensaje in form_registro.error_messages:
                 messages.error(request, form_registro.error_messages[mensaje])
-            return render(request,"Autenticacion/registro.html", {'form_registro': form_registro})
+            return render(request,"Autenticacion/registro_usuario/registro.html", {'form_registro': form_registro})
+
+def inicio_sesion(request):
+    
+    form_login = AuthenticationForm()
+    
+    return render(request,"Autenticacion/login  /inicio_sesion.html", {'form_login': form_login})
 
 def cerrar_sesion(request):
     

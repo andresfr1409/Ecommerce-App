@@ -59,7 +59,7 @@
                 <a class="btn btn-danger" href="{% url 'cerrar_sesion' %}">Cerrar Sesión</a>
             {% else %}
                 <!-- Mostrar estos botones si el usuario no está autenticado -->
-                <a class="btn btn-success" href="#">Iniciar Sesión</a>
+                <a class="btn btn-success" href="{% url 'iniciar_sesion' %}">Iniciar Sesión</a>
                 <a class="btn btn-primary" href="{% url 'registro' %}">Registrarse</a>
             {% endif %}
         <a type="button" class="btn btn-success position-absolute" style="margin-left: 1250px" href="{% url 'carrito' %}">
