@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import login, logout
+from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 
 class Vregistro(View):
@@ -30,16 +30,12 @@ class Vregistro(View):
 def inicio_sesion(request):
     
     if request.method == 'POST':
-        form_login = AuthenticationForm(request, data=request.POST)
+        form_login = AuthenticationForm(request, request.POST)
         if form_login.is_valid():
-            usuario = form_login.get_user()
-            login(request, usuario)
-            return redirect('Home')
-        else:
-            if 'username' in form_login.errors:
-                messages.error(request, 'El nombre de usuario no existe.')
-            elif 'password' in form_login.errors:
-                messages.error(request, 'La contraseña es incorrecta.')
+            usuario = authenticate(request, username=form_login.cleaned_data['username'], password=form_login.cleaned_data['password'])
+            if usuario is not None:
+                login(request, usuario)
+                return redirect('Home')
     else: 
         form_login = AuthenticationForm()
     

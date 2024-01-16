@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from django.contrib.messages import constants as mensajes
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -144,6 +146,19 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'feliperin14@gmail.com'
 EMAIL_HOST_PASSWORD = 'upsk rhvf hyai mkmu'
 
+# configuracion de Crispy Forms para bootstrap 5
+
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+# integracion de los tags en generacion de mensajes en formularios 
+
+MESSAGE_TAGS = {
+    mensajes.DEBUG: 'debug',
+    mensajes.INFO: 'info',
+    mensajes.SUCCESS: 'success',
+    mensajes.WARNING: 'warning',
+    mensajes.ERROR: 'error',
+}
+
