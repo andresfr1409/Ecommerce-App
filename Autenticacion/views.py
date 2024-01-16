@@ -29,9 +29,21 @@ class Vregistro(View):
 
 def inicio_sesion(request):
     
-    form_login = AuthenticationForm()
+    if request.method == 'POST':
+        form_login = AuthenticationForm(request, data=request.POST)
+        if form_login.is_valid():
+            usuario = form_login.get_user()
+            login(request, usuario)
+            return redirect('Home')
+        else:
+            if 'username' in form_login.errors:
+                messages.error(request, 'El nombre de usuario no existe.')
+            elif 'password' in form_login.errors:
+                messages.error(request, 'La contraseña es incorrecta.')
+    else: 
+        form_login = AuthenticationForm()
     
-    return render(request,"Autenticacion/login  /inicio_sesion.html", {'form_login': form_login})
+    return render(request,"Autenticacion/login/inicio_sesion.html", {'form_login': form_login})
 
 def cerrar_sesion(request):
     
