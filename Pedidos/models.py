@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models import F, Sum, FloatField
 from Tienda.models import Producto
 class Pedido(models.Model):
     user_id = models.ForeignKey(User, on_delete = models.CASCADE)
@@ -8,6 +9,16 @@ class Pedido(models.Model):
     def __str__(self):
         
         return f'Pedido #{self.id} - {self.user_id.username}' 
+    
+    @property
+    def total(self):
+        
+        return self.lineapedido_set.aggregate(
+            
+            total = Sum(F("precio")*F("cantidad"), output_field = FloatField())
+        
+        )["total"]
+    
     class Meta:
         db_table = 'Pedidos'
         verbose_name = 'pedido'
