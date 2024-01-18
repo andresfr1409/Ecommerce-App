@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models import F, Sum, FloatField
 from Tienda.models import Producto
 class Pedido(models.Model):
-    user_id = models.ForeignKey(User, on_delete = models.CASCADE)
+    user = models.ForeignKey(User, on_delete = models.CASCADE)
     creado = models.DateTimeField(auto_now_add=True)  
     
     def __str__(self):
@@ -26,9 +26,9 @@ class Pedido(models.Model):
         ordering = ['id']
 
 class LineaPedido(models.Model):
-    user_id = models.ForeignKey(User, on_delete = models.CASCADE)
-    producto_id = models.ForeignKey(Producto, on_delete=models.CASCADE)
-    pedido_id = models.ForeignKey(Pedido, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete = models.CASCADE)
+    producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
+    pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE)
     cantidad = models.PositiveIntegerField(default=1)
     creado = models.DateTimeField(auto_now_add=True)  
     
