@@ -38,7 +38,16 @@
                 </tbody>
             </table>
             <p>Total: ${{ total_carrito }}</p>
-            <a href="{% url 'vaciar_carrito' %}" class="btn btn-danger">Vaciar Carrito</a>
+            {% if request.session.carro.items %}
+                <a href="{% url 'vaciar_carrito' %}" class="btn btn-danger">Vaciar Carrito</a>
+            {% else %}
+                <button class="btn btn-danger" disabled>Vaciar Carrito</button>
+            {% endif %}
+            {% if request.session.carro.items %}
+                <a href="#" class="btn btn-success">Comprar Ahora</a>
+            {% else %}
+                <button class="btn btn-success" disabled>Comprar Ahora</button>
+            {% endif %}
         {% else %}
             <p>El carrito está vacío.</p>
         {% endif %}

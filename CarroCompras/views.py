@@ -31,6 +31,7 @@ def restar_producto(request, producto_id):
     return redirect('carrito')
 
 def sumar_producto(request, producto_id):
+    
     producto = Producto.objects.get(id=producto_id)
     
     carro = Carro(request)
