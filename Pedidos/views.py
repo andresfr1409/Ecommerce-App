@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+from django.core.mail import send_mail
 from CarroCompras.carro import Carro
 from Pedidos.models import Pedido,LineaPedido
 
@@ -21,14 +24,36 @@ def procesar_compra(request):
     
     LineaPedido.objects.bulk_create(lineas_pedido)
     
-    '''
     enviar_mail(
         pedido = pedido,
         lineas_pedido = lineas_pedido,
         nombre_usuario = request.username,
         email_usuario = request.usermail,
     )
-    '''
+    
     messages.success(request, "Compra realizada exitosamente")
     
     return redirect('Tienda')
+
+def enviar_mail(**kwargs):
+    
+    asunto = 'Pedido realizado de Gestion Pedidos'
+    mensaje = render_to_string('emails/pedido.html',{
+        "pedido": kwargs.get('pedido'),
+        "lineas_pedido": kwargs.get('lineas_pedido'),
+        "nombre_usuario": kwargs.get('nombre_usuario') 
+    })
+    
+    mensaje_texto = strip_tags(mensaje)
+    
+    from_email="feliperin14@hotmail.es"
+    to = kwargs.get('email_usuario')
+    
+    send_mail(
+    asunto,
+    mensaje_texto,
+    from_email,
+    [to],
+    html_message=mensaje,
+    fail_silently=False,
+)
