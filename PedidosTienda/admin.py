@@ -1,5 +1,5 @@
 from django.contrib import admin
-from Pedidos.models import Pedido,LineaPedido
+from PedidosTienda.models import Pedido,LineaPedido
 
 class PedidoAdmin(admin.ModelAdmin):
     readonly_fields = ('creado',)
@@ -9,3 +9,4 @@ class LineaPedidoAdmin(admin.ModelAdmin):
 
 admin.site.register(Pedido, PedidoAdmin)
 admin.site.register(LineaPedido, LineaPedidoAdmin)
+

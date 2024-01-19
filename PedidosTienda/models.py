@@ -8,7 +8,7 @@ class Pedido(models.Model):
     
     def __str__(self):
         
-        return f'Pedido #{self.id} - {self.user_id.username}' 
+        return f'Pedido #{self.id} - {self.user.username}' 
     
     @property
     def total(self):
@@ -34,7 +34,7 @@ class LineaPedido(models.Model):
     
     def __str__(self):
         
-        return f'Linea de pedido#{self.id} - {self.cantidad} unidad/s de {self.producto_id.nombre}'
+        return f'Linea de pedido#{self.id} - {self.cantidad} unidad/s de {self.producto.nombre}'
     class Meta:
         db_table = 'LineaPedidos'
         verbose_name = 'LineaPedido'

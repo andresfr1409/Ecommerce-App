@@ -5,7 +5,7 @@ from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.core.mail import send_mail
 from CarroCompras.carro import Carro
-from Pedidos.models import Pedido,LineaPedido
+from PedidosTienda.models import Pedido,LineaPedido
 
 @login_required
 def procesar_compra(request):
