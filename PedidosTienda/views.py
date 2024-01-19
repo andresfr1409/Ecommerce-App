@@ -27,8 +27,8 @@ def procesar_compra(request):
     enviar_mail(
         pedido = pedido,
         lineas_pedido = lineas_pedido,
-        nombre_usuario = request.username,
-        email_usuario = request.usermail,
+        nombre_usuario = request.user.username,
+        email_usuario = request.user.email,
     )
     
     messages.success(request, "Compra realizada exitosamente")
@@ -41,7 +41,8 @@ def enviar_mail(**kwargs):
     mensaje = render_to_string('emails/pedido.html',{
         "pedido": kwargs.get('pedido'),
         "lineas_pedido": kwargs.get('lineas_pedido'),
-        "nombre_usuario": kwargs.get('nombre_usuario') 
+        "nombre_usuario": kwargs.get('nombre_usuario'),
+        "email_usuario": kwargs.get('email_usuario')
     })
     
     mensaje_texto = strip_tags(mensaje)
