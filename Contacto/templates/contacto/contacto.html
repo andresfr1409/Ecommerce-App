@@ -2,17 +2,19 @@
 
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block title %} Contacto {% endblock %}
 
 
 {% block content %}
-    <h1>Pagina de contacto</h1>
     <div class="contenedorFormulario">
         <form method="post" action="{% url 'Contacto' %}">
             {% csrf_token %}
-            <table style="color: #ffffff;margin: 30px auto">{{ formulario_contacto.as_table }}</table>
-            <input type="submit" value="Enviar" class="btn btn-success"></input>
-            <input type="reset" value="Borrar" class="btn btn-danger"></input>
+            <h1 style="text-align: center">Contacto</h1>
+            <table id="formularioContacto">{{ formulario_contacto|crispy }}</table>
+            <input id="botonesFormContacto" type="submit" value="Enviar" class="btn btn-success"></input>
+            <input id="botonesFormContacto" type="reset" value="Borrar" class="btn btn-danger"></input>
         </form>
         {% if messages %}
             {% for message in messages %}
