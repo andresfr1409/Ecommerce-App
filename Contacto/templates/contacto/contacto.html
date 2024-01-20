@@ -11,7 +11,7 @@
     <div class="contenedorFormulario">
         <form method="post" action="{% url 'Contacto' %}">
             {% csrf_token %}
-            <h1 style="text-align: center">Contacto</h1>
+            <h1 style="text-align: center;font-weight: bold">Contacto</h1>
             <table id="formularioContacto">{{ formulario_contacto|crispy }}</table>
             <input id="botonesFormContacto" type="submit" value="Enviar" class="btn btn-success"></input>
             <input id="botonesFormContacto" type="reset" value="Borrar" class="btn btn-danger"></input>

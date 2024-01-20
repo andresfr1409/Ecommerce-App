@@ -315,6 +315,8 @@ ul.errorlist{
   font-weight: bold;
   border-radius: 20px;
   padding: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 #mensajesCentrales{
