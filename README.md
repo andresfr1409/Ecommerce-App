@@ -2,6 +2,8 @@
   <b>FluxShopper E-commerce</b>
 </h1>
 
+![Texto Alternativo](img/FluxShopper.png)
+
 ## Nombre y descripcion 
 
 FluxShopper es una plataforma de comercio electrónico diseñada para ofrecer a los usuarios una experiencia de compra en línea fácil y conveniente. Esta aplicación proporciona un entorno virtual donde los usuarios pueden explorar, seleccionar y comprar una amplia variedad de productos, agregandolos al carrito.
@@ -35,9 +37,14 @@ Los usuarios pueden registrarse para crear una cuenta, lo que les permite realiz
 
 ## Instalación
 
-Proporciona instrucciones paso a paso sobre cómo instalar y configurar tu proyecto. Asegúrate de incluir cualquier dependencia que pueda ser necesaria.
+1. Clona el repositorio
+2. Configurar el entorno virtual y instalar las dependencias con "pip install -r requirements.txt".
+3. Ejecuta las migraciones con "python manage.py makemigrations" y despues ejecutar "python manage.py migrate".
+4. Inicia el servidor de desarrollo local con "python manage.py runserver".
 
-```bash
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
+## Uso
+
+1. Registrate o inicia sesion para poder agregar y comprar productos
+2. Explora la tienda y sus diferentes secciones,  seleccionando los productos que deseas agregar al carrito.
+3. Agrega productos al carrito de compras.
+4. compra para que te llegue a tu email la compra realizada
