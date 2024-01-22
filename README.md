@@ -2,7 +2,7 @@
   <b>FluxShopper E-commerce</b>
 </h1>
 
-![Texto Alternativo](img/FluxShopper.png)
+![Texto Alternativo](Ecommerce/img/FluxShopper.png)
 
 ## Nombre y descripcion 
 
