@@ -28,11 +28,10 @@ Los usuarios pueden registrarse para crear una cuenta, lo que les permite realiz
 
 ## Tecnologías Utilizadas
 
-Enumera las tecnologías y herramientas que utilizaste para desarrollar tu proyecto.
-
-- Django
-- HTML, CSS, JavaScript
-- Otros...
+- Django: Marco de desarrollo web de Python para el backend.
+- SQLite: Base de datos incorporada para almacenar información de los usuario, detalles de productos e informacion como entradas del blog y entradas los servicios ofrecidos.
+- HTML, CSS, JavaScript: Tecnologías estándar para el desarrollo del frontend.
+- Bootstrap: Utilizado para el diseño y la interfaz de usuario receptiva.
 
 ## Instalación
 
