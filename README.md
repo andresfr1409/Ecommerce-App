@@ -39,7 +39,8 @@ Integración de envio de email al usuario de los productos a comprar, al momento
 En FluxShopper, Django se utiliza como el motor principal del backend. Proporciona una arquitectura MVT sólida, facilitando la organización y la implementación eficiente de lógica de negocios. Django también incluye características incorporadas como la administración de bases de datos, autenticación de usuarios y generación de formularios que aceleran el desarrollo.
 
 - ### SQLite
-Base de datos incorporada para almacenar información de los usuario, detalles de productos e informacion como entradas del blog y entradas los servicios ofrecidos.
+
+En FluxShopper, SQLite cumple el papel de la base de datos, almacenando información vital como detalles de productos, usuarios y transacciones. Aunque es ideal para proyectos más pequeños, Django permite la fácil migración a sistemas de gestión de bases de datos más robustos a medida que el proyecto escala.
 
 - ### HTML, CSS, JavaScript
 
