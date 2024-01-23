@@ -20,15 +20,17 @@ Incluye capturas de pantalla o imágenes que muestren la interfaz o funcionalida
 
 Los usuarios pueden explorar una amplia gama de productos, organizados por categorías para facilitar la búsqueda.
 
-### Carrito de Compras: 
+### Carrito de Compras
 
 Funcionalidad de carrito de compras que permite a los usuarios agregar, eliminar y ajustar la cantidad de productos fácilmente.
 
-### Registro de Usuarios: 
+### Registro de Usuarios
 
 Los usuarios pueden registrarse para crear una cuenta, lo que les permite realizar un seguimiento de sus pedidos y guardar información personal.
 
-### Proceso de Pago por email: Integración de envio de email al usuario de los productos a comprar, al momento de gestionar el pedido del carrito de compras.
+### Proceso de Pago por email
+
+Integración de envio de email al usuario de los productos a comprar, al momento de gestionar el pedido del carrito de compras.
 
 ## Tecnologías Utilizadas
 
