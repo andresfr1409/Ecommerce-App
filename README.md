@@ -12,32 +12,42 @@ FluxShopper es una plataforma de comercio electrónico diseñada para ofrecer a 
 
 ## Capturas de Pantalla
 
-Incluye capturas de pantalla o imágenes que muestren la interfaz o funcionalidades clave de tu proyecto.
+pendiente
 
 ## Características 
 
-### Exploración de Productos
+- ### Exploración de Productos
 
 Los usuarios pueden explorar una amplia gama de productos, organizados por categorías para facilitar la búsqueda.
 
-### Carrito de Compras
+- ### Carrito de Compras
 
 Funcionalidad de carrito de compras que permite a los usuarios agregar, eliminar y ajustar la cantidad de productos fácilmente.
 
-### Registro de Usuarios
+- ### Registro de Usuarios
 
 Los usuarios pueden registrarse para crear una cuenta, lo que les permite realizar un seguimiento de sus pedidos y guardar información personal.
 
-### Proceso de Pago por email
+- ### Proceso de Pago por email
 
 Integración de envio de email al usuario de los productos a comprar, al momento de gestionar el pedido del carrito de compras.
 
 ## Tecnologías Utilizadas
 
-- Django: Marco de desarrollo web de Python para el backend.
-- SQLite: Base de datos incorporada para almacenar información de los usuario, detalles de productos e informacion como entradas del blog y entradas los servicios ofrecidos.
-- HTML, CSS, JavaScript: Tecnologías estándar para el desarrollo del frontend.
-- Bootstrap: Utilizado para el diseño y la interfaz de usuario receptiva.
+- ### Django 
+
+En FluxShopper, Django se utiliza como el motor principal del backend. Proporciona una arquitectura MVT sólida, facilitando la organización y la implementación eficiente de lógica de negocios. Django también incluye características incorporadas como la administración de bases de datos, autenticación de usuarios y generación de formularios que aceleran el desarrollo.
+
+- ### SQLite
+Base de datos incorporada para almacenar información de los usuario, detalles de productos e informacion como entradas del blog y entradas los servicios ofrecidos.
+
+- ### HTML, CSS, JavaScript
+
+Estas tecnologías web fundamentales se utilizan para construir el frontend de FluxShopper. HTML define la estructura de las páginas web, CSS maneja la presentación y el diseño, y JavaScript se encarga de la interactividad del usuario. La combinación de estas tecnologías proporciona una interfaz de usuario dinámica y receptiva.
+
+- ### Bootstrap
+
+FluxShopper aprovecha Bootstrap para garantizar que la aplicación sea visualmente atractiva en una variedad de dispositivos y tamaños de pantalla. Además, los componentes predefinidos de Bootstrap agilizan el desarrollo al proporcionar elementos listos para usar, como barras de navegación, botones y formularios.
 
 ## Instalación
 
