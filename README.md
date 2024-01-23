@@ -14,7 +14,7 @@ FluxShopper es una plataforma de comercio electrónico diseñada para ofrecer a 
 
 pendiente
 
-## Características 
+## Funcionalidades Principales
 
 - ### Exploración de Productos
 
@@ -24,13 +24,17 @@ Los usuarios pueden explorar una amplia gama de productos, organizados por categ
 
 Funcionalidad de carrito de compras que permite a los usuarios agregar, eliminar y ajustar la cantidad de productos fácilmente.
 
-- ### Registro de Usuarios
+- ### Registro y autenticacion de Usuarios
 
 Los usuarios pueden registrarse para crear una cuenta, lo que les permite realizar un seguimiento de sus pedidos y guardar información personal.
 
 - ### Proceso de Pago por email
 
 Integración de envio de email al usuario de los productos a comprar, al momento de gestionar el pedido del carrito de compras.
+
+- ### Formulario de contacto
+
+Integracion de un formulario de contacto para enviar sugerencias al administrador de la web.
 
 ## Tecnologías Utilizadas
 
