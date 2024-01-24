@@ -56,6 +56,14 @@ FluxShopper aprovecha Bootstrap para garantizar que la aplicación sea visualmen
 
 ## Instalación
 
+### Requisitos Previos
+
+Asegúrese de tener instalados los siguientes requisitos previos:
+
+- #### Python
+
+La aplicación utiliza Python como lenguaje de programación. Puede descargar e instalar la última versión de Python desde python.org.
+
 1. Clona el repositorio
 2. Configurar el entorno virtual y instalar las dependencias con el comando "pip install -r requirements.txt".
 3. Ejecuta las migraciones con "python manage.py makemigrations" y despues ejecutar "python manage.py migrate".
