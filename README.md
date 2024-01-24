@@ -2,7 +2,9 @@
   <b>FluxShopper E-commerce</b>
 </h1>
 
-![Texto Alternativo](Ecommerce/img/FluxShopper.png)
+<p align="center">
+  <img src="Ecommerce/static/Ecommerce/img/FluxShopper.png" alt="FluxShopper">
+</p>
 
 ## Nombre y descripcion 
 
@@ -10,37 +12,62 @@ FluxShopper es una plataforma de comercio electrónico diseñada para ofrecer a 
 
 ## Capturas de Pantalla
 
-Incluye capturas de pantalla o imágenes que muestren la interfaz o funcionalidades clave de tu proyecto.
+pendiente
 
-## Características 
+## Funcionalidades Principales
 
-### Exploración de Productos
+- ### Exploración de Productos
 
 Los usuarios pueden explorar una amplia gama de productos, organizados por categorías para facilitar la búsqueda.
 
-### Carrito de Compras: 
+- ### Carrito de Compras
 
 Funcionalidad de carrito de compras que permite a los usuarios agregar, eliminar y ajustar la cantidad de productos fácilmente.
 
-### Registro de Usuarios: 
+- ### Registro y autenticacion de Usuarios
 
 Los usuarios pueden registrarse para crear una cuenta, lo que les permite realizar un seguimiento de sus pedidos y guardar información personal.
 
-### Proceso de Pago por email: Integración de envio de email al usuario de los productos a comprar, al momento de gestionar el pedido del carrito de compras.
+- ### Proceso de Pago por email
+
+Integración de envio de email al usuario de los productos a comprar, al momento de gestionar el pedido del carrito de compras.
+
+- ### Formulario de contacto
+
+Integracion de un formulario de contacto para enviar sugerencias al administrador de la web.
 
 ## Tecnologías Utilizadas
 
-- Django: Marco de desarrollo web de Python para el backend.
-- SQLite: Base de datos incorporada para almacenar información de los usuario, detalles de productos e informacion como entradas del blog y entradas los servicios ofrecidos.
-- HTML, CSS, JavaScript: Tecnologías estándar para el desarrollo del frontend.
-- Bootstrap: Utilizado para el diseño y la interfaz de usuario receptiva.
+- ### Django 
+
+En FluxShopper, Django se utiliza como el motor principal del backend. Proporciona una arquitectura MVT sólida, facilitando la organización y la implementación eficiente de lógica de negocios. Django también incluye características incorporadas como la administración de bases de datos, autenticación de usuarios y generación de formularios que aceleran el desarrollo.
+
+- ### SQLite
+
+En FluxShopper, SQLite cumple el papel de la base de datos, almacenando información vital como detalles de productos, usuarios y transacciones. Aunque es ideal para proyectos más pequeños, Django permite la fácil migración a sistemas de gestión de bases de datos más robustos a medida que el proyecto escala.
+
+- ### HTML, CSS, JavaScript
+
+Estas tecnologías web fundamentales se utilizan para construir el frontend de FluxShopper. HTML define la estructura de las páginas web, CSS maneja la presentación y el diseño, y JavaScript se encarga de la interactividad del usuario. La combinación de estas tecnologías proporciona una interfaz de usuario dinámica y receptiva.
+
+- ### Bootstrap
+
+FluxShopper aprovecha Bootstrap para garantizar que la aplicación sea visualmente atractiva en una variedad de dispositivos y tamaños de pantalla. Además, los componentes predefinidos de Bootstrap agilizan el desarrollo al proporcionar elementos listos para usar, como barras de navegación, botones y formularios.
 
 ## Instalación
 
+### Requisitos Previos
+
+Asegúrese de tener instalados los siguientes requisitos previos:
+
+- #### Python
+
+La aplicación utiliza Python como lenguaje de programación. Puede descargar e instalar la última versión de Python desde python.org.
+
 1. Clona el repositorio
-2. Configurar el entorno virtual y instalar las dependencias con "pip install -r requirements.txt".
+2. Configurar el entorno virtual y instalar las dependencias con el comando "pip install -r requirements.txt".
 3. Ejecuta las migraciones con "python manage.py makemigrations" y despues ejecutar "python manage.py migrate".
-4. Inicia el servidor de desarrollo local con "python manage.py runserver".
+4. Inicia el servidor de desarrollo local con el comando "python manage.py runserver".
 
 ## Uso
 
