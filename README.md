@@ -57,7 +57,7 @@ FluxShopper aprovecha Bootstrap para garantizar que la aplicación sea visualmen
 ## Instalación
 
 1. Clona el repositorio
-2. Configurar el entorno virtual y instalar las dependencias con "pip install -r requirements.txt".
+2. Configurar el entorno virtual y instalar las dependencias con el comando "pip install -r requirements.txt".
 3. Ejecuta las migraciones con "python manage.py makemigrations" y despues ejecutar "python manage.py migrate".
 4. Inicia el servidor de desarrollo local con "python manage.py runserver".
 
